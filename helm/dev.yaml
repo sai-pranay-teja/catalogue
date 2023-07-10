@@ -1,7 +1,7 @@
 component: catalogue
 params: "DOCUMENTDB:dev.catalogue.mongo,MONGO_URL:dev.docdb.catalogue.url"
 # params: "DOCUMENTDB:dev.catalogue.mongo,MONGO_URL:dev.catalogue.mongo_url"
-
+env: dev
 schema:
   create: true
   type: mongo
