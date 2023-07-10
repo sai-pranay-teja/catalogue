@@ -3,5 +3,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY server.js .
 COPY node_modules/ node_modules/
+RUN  curl -s -L https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem -o /app/rds-combined-ca-bundle.pem
 COPY docker/run.sh .
 ENTRYPOINT [ "bash", "run.sh" ]
