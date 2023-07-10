@@ -3,6 +3,6 @@ RUN           mkdir /app
 WORKDIR       /app
 COPY          node_modules/ node_modules/
 COPY          server.js .
-RUN           sudo curl -s -L https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem -o /app/rds-combined-ca-bundle.pem
+RUN           curl -s -L https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem -o /app/rds-combined-ca-bundle.pem
 COPY          docker/run.sh .
 ENTRYPOINT    [ "bash", "run.sh" ]
