@@ -5,3 +5,12 @@ env: dev
 schema:
   create: true
   type: mongo
+
+
+resources:
+   limits:
+     cpu: 300m
+     memory: 175Mi
+   requests:
+     cpu: 200m
+     memory: 128Mi
